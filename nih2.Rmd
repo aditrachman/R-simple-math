@@ -1,0 +1,98 @@
+---
+title: "case"
+author: "aditrachman.github.io"
+date: '2022-10-08'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# Diagram Batang
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+barplot(kota, main="Data Tingkat Pengangguran Terbuka Provinsi Banten 2021", horiz=FALSE,
+  names.arg=c("Pandeglang", "Lebak", "Tangerang", "Serang", "Tangerang", "Cilegon", "Serang", "Tangeran selatan", "Banten"))
+```
+
+```{r}
+# Diagram Lingkaran
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+label <- c("Pandeglang", "Lebak", "Tangerang", "Serang", "Tangerang", "Cilegon", "Serang", "Tangeran selatan", "Banten")
+pie(kota, labels = label, main="Jumlah Pengangguran di Provinsi DIY Tahun 2021 (Jiwa")
+
+```
+
+```{r}
+#Diagram Stem and Leaf 
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+stem(kota)
+
+```
+
+```{r}
+
+# Diagram garis
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+plot(kota, type = "o")
+
+```
+
+```{r}
+# menghitung mean
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+hasil <- mean(kota)
+
+print(hasil)
+```
+
+```{r}
+# menghitung median
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+hasil <- median(kota)
+
+print(hasil)
+```
+
+```{r}
+# modus
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+# mendefinisikan fungsi modus
+mode = function() {
+  
+  # baru dihitung var  kota  
+  return(names(sort(-table(kota)))[1])
+}
+
+mode()
+```
+
+```{r}
+# menghitung varians
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+hasil <- var(kota)
+
+print(hasil)
+```
+
+```{r}
+# menghitung data varians
+kota <- c(7.7, 7.86, 9.06, 10.58, 9.07, 10.13, 9.41, 8.6, 8.98)
+
+hasil <- sqrt(var(kota))  
+
+print(hasil)
+```
+
+
+
+
+
